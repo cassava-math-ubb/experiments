@@ -13,8 +13,6 @@ from tensorflow.keras.models import Sequential
 
 from tabulate import tabulate
 
-loss_fn_alex = spipl.LPIPS(net='alex')
-
 """
 	Some basic loading for the images, resulting in an ordinary Python dict with the following
 	strcutre: {'image_name.jpg': {'image': <RGB-3channel>, 'label': <integer>}}
@@ -127,10 +125,9 @@ class ISM:
 			img1 = self.imgpack.images[name1]['image']
 			img2 = self.imgpack.images[name2]['image']
 			
-			""" lpips needs some special care """
- 			# l = loss_fn_alex(img1, img2)
+			""" call in the other module """
 
-			l = 0 # yes, I know they are all zero, I'll change them 
+			l = 0
 			p = 0 
 			s = 0
 			experiment_results['lpips'].append(l)
