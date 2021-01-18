@@ -1,9 +1,6 @@
 from tabulate import tabulate
-import matplotlib.pyplot as plt
 import numpy as np
-import os
 import json
-import lpips as spipl
 import tensorflow as tf
 import lpips
 
