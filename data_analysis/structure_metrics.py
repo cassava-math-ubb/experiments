@@ -36,7 +36,7 @@ class LoadImageDataset:
         f = open(csv)
         lines = f.readlines()
         # !! I should load k random images and export a report file.
-        # !! Maybe, I should also load an equal amount of images from each class..
+        # !! Maybe we should also load an equal amount of images from each class..
         for line in lines[1:self.limit]:
             line = line.strip('\n')
             bucket = line.split(',')

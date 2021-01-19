@@ -3,6 +3,7 @@ import cv2
 import os
 import argparse
 import matplotlib.pyplot as plt
+from skimage import io
 
 base_path = '/Volumes/LaCie SSD/cassava-leaf-disease-classification/'
 train_path = base_path + 'train_images/'
@@ -27,7 +28,7 @@ def open_an_image(disease_class, skip = 0):
 			image_index += 1
 
 	imgname = os.listdir(train_path)[image_index].strip('._')
-	image = cv2.imread(train_path + imgname)
+	image = io.imread(train_path + imgname)
 	return image
 
 
