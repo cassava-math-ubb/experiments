@@ -1,0 +1,263 @@
+Found 17115 validated image filenames belonging to 5 classes.
+Found 856 validated image filenames belonging to 5 classes.
+2021-02-02 00:34:28.948916: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-02-02 00:34:28.949415: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /shared/ibm/platform_lsf/9.1/linux2.6-glibc2.3-x86_64/lib
+2021-02-02 00:34:28.949439: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2021-02-02 00:34:28.949471: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (compute055.ubb-hpc.local): /proc/driver/nvidia/version does not exist
+2021-02-02 00:34:28.949870: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-02-02 00:34:28.951756: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+Downloading data from https://storage.googleapis.com/keras-applications/efficientnetb0_notop.h5
+16711680/16705208 [==============================] - 2s 0us/step
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+efficientnetb0 (Functional)  (None, 16, 16, 1280)      4049571
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 1280)              0
+_________________________________________________________________
+dense (Dense)                (None, 5)                 6405
+=================================================================
+Total params: 4,055,976
+Trainable params: 4,013,953
+Non-trainable params: 42,023
+_________________________________________________________________
+2021-02-02 00:34:33.669454: I tensorflow/core/profiler/lib/profiler_session.cc:136] Profiler session initializing.
+2021-02-02 00:34:33.669487: I tensorflow/core/profiler/lib/profiler_session.cc:155] Profiler session started.
+2021-02-02 00:34:33.669766: I tensorflow/core/profiler/lib/profiler_session.cc:172] Profiler session tear down.
+2021-02-02 00:34:35.103743: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-02-02 00:34:35.104880: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2599955000 Hz
+Epoch 1/8
+   1/1070 [..............................] - ETA: 3:15:01 - loss: 1.6999 - accuracy: 0.12502021-02-02 00:34:46.318404: I tensorflow/core/profiler/lib/profiler_session.cc:136] Profiler session initializing.
+2021-02-02 00:34:46.318447: I tensorflow/core/profiler/lib/profiler_session.cc:155] Profiler session started.
+   2/1070 [..............................] - ETA: 58:19 - loss: 1.6394 - accuracy: 0.2031  2021-02-02 00:34:49.353603: I tensorflow/core/profiler/lib/profiler_session.cc:71] Profiler session collecting data.
+2021-02-02 00:34:49.372254: I tensorflow/core/profiler/lib/profiler_session.cc:172] Profiler session tear down.
+2021-02-02 00:34:49.408282: I tensorflow/core/profiler/rpc/client/save_profile.cc:137] Creating directory: k_fold_logs/scalars/20210202-003433/train/plugins/profile/2021_02_02_00_34_49
+2021-02-02 00:34:49.432040: I tensorflow/core/profiler/rpc/client/save_profile.cc:143] Dumped gzipped tool data for trace.json.gz to k_fold_logs/scalars/20210202-003433/train/plugins/profile/2021_02_02_00_34_49/compute055.ubb-hpc.local.trace.json.gz
+2021-02-02 00:34:49.449097: I tensorflow/core/profiler/rpc/client/save_profile.cc:137] Creating directory: k_fold_logs/scalars/20210202-003433/train/plugins/profile/2021_02_02_00_34_49
+2021-02-02 00:34:49.449411: I tensorflow/core/profiler/rpc/client/save_profile.cc:143] Dumped gzipped tool data for memory_profile.json.gz to k_fold_logs/scalars/20210202-003433/train/plugins/profile/2021_02_02_00_34_49/compute055.ubb-hpc.local.memory_profile.json.gz
+2021-02-02 00:34:49.461756: I tensorflow/core/profiler/rpc/client/capture_profile.cc:251] Creating directory: k_fold_logs/scalars/20210202-003433/train/plugins/profile/2021_02_02_00_34_49Dumped tool data for xplane.pb to k_fold_logs/scalars/20210202-003433/train/plugins/profile/2021_02_02_00_34_49/compute055.ubb-hpc.local.xplane.pb
+Dumped tool data for overview_page.pb to k_fold_logs/scalars/20210202-003433/train/plugins/profile/2021_02_02_00_34_49/compute055.ubb-hpc.local.overview_page.pb
+Dumped tool data for input_pipeline.pb to k_fold_logs/scalars/20210202-003433/train/plugins/profile/2021_02_02_00_34_49/compute055.ubb-hpc.local.input_pipeline.pb
+Dumped tool data for tensorflow_stats.pb to k_fold_logs/scalars/20210202-003433/train/plugins/profile/2021_02_02_00_34_49/compute055.ubb-hpc.local.tensorflow_stats.pb
+Dumped tool data for kernel_stats.pb to k_fold_logs/scalars/20210202-003433/train/plugins/profile/2021_02_02_00_34_49/compute055.ubb-hpc.local.kernel_stats.pb
+
+1070/1070 [==============================] - 3272s 3s/step - loss: 0.6731 - accuracy: 0.7605 - val_loss: 0.6736 - val_accuracy: 0.7605
+Epoch 2/8
+1070/1070 [==============================] - 3253s 3s/step - loss: 0.4735 - accuracy: 0.8358 - val_loss: 0.5244 - val_accuracy: 0.8061
+Epoch 3/8
+1070/1070 [==============================] - 3248s 3s/step - loss: 0.4337 - accuracy: 0.8525 - val_loss: 0.4662 - val_accuracy: 0.8446
+Epoch 4/8
+1070/1070 [==============================] - 3234s 3s/step - loss: 0.4224 - accuracy: 0.8619 - val_loss: 0.4350 - val_accuracy: 0.8470
+Epoch 5/8
+1070/1070 [==============================] - 3231s 3s/step - loss: 0.4012 - accuracy: 0.8674 - val_loss: 0.4295 - val_accuracy: 0.8528
+Epoch 6/8
+1070/1070 [==============================] - 3231s 3s/step - loss: 0.4014 - accuracy: 0.8644 - val_loss: 0.3853 - val_accuracy: 0.8586
+Epoch 7/8
+1070/1070 [==============================] - 3242s 3s/step - loss: 0.3945 - accuracy: 0.8642 - val_loss: 0.4075 - val_accuracy: 0.8610
+Epoch 8/8
+1070/1070 [==============================] - 3234s 3s/step - loss: 0.3614 - accuracy: 0.8746 - val_loss: 0.3774 - val_accuracy: 0.8610
+54/54 [==============================] - 29s 541ms/step - loss: 0.3774 - accuracy: 0.8610
+Found 17116 validated image filenames belonging to 5 classes.
+Found 856 validated image filenames belonging to 5 classes.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+efficientnetb0 (Functional)  (None, 16, 16, 1280)      4049571
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 1280)              0
+_________________________________________________________________
+dense (Dense)                (None, 5)                 6405
+=================================================================
+Total params: 4,055,976
+Trainable params: 4,013,953
+Non-trainable params: 42,023
+_________________________________________________________________
+2021-02-02 07:47:56.907519: I tensorflow/core/profiler/lib/profiler_session.cc:136] Profiler session initializing.
+2021-02-02 07:47:56.907549: I tensorflow/core/profiler/lib/profiler_session.cc:155] Profiler session started.
+2021-02-02 07:47:56.907614: I tensorflow/core/profiler/lib/profiler_session.cc:172] Profiler session tear down.
+Epoch 1/8
+   1/1070 [..............................] - ETA: 3:09:35 - loss: 1.3452 - accuracy: 0.62502021-02-02 07:48:08.795344: I tensorflow/core/profiler/lib/profiler_session.cc:136] Profiler session initializing.
+2021-02-02 07:48:08.795391: I tensorflow/core/profiler/lib/profiler_session.cc:155] Profiler session started.
+   2/1070 [..............................] - ETA: 57:04 - loss: 1.2877 - accuracy: 0.6406  2021-02-02 07:48:12.340496: I tensorflow/core/profiler/lib/profiler_session.cc:71] Profiler session collecting data.
+2021-02-02 07:48:12.361781: I tensorflow/core/profiler/lib/profiler_session.cc:172] Profiler session tear down.
+2021-02-02 07:48:12.399275: I tensorflow/core/profiler/rpc/client/save_profile.cc:137] Creating directory: k_fold_logs/scalars/20210202-074756/train/plugins/profile/2021_02_02_07_48_12
+2021-02-02 07:48:12.426087: I tensorflow/core/profiler/rpc/client/save_profile.cc:143] Dumped gzipped tool data for trace.json.gz to k_fold_logs/scalars/20210202-074756/train/plugins/profile/2021_02_02_07_48_12/compute055.ubb-hpc.local.trace.json.gz
+2021-02-02 07:48:12.446033: I tensorflow/core/profiler/rpc/client/save_profile.cc:137] Creating directory: k_fold_logs/scalars/20210202-074756/train/plugins/profile/2021_02_02_07_48_12
+2021-02-02 07:48:12.446446: I tensorflow/core/profiler/rpc/client/save_profile.cc:143] Dumped gzipped tool data for memory_profile.json.gz to k_fold_logs/scalars/20210202-074756/train/plugins/profile/2021_02_02_07_48_12/compute055.ubb-hpc.local.memory_profile.json.gz
+2021-02-02 07:48:12.465327: I tensorflow/core/profiler/rpc/client/capture_profile.cc:251] Creating directory: k_fold_logs/scalars/20210202-074756/train/plugins/profile/2021_02_02_07_48_12Dumped tool data for xplane.pb to k_fold_logs/scalars/20210202-074756/train/plugins/profile/2021_02_02_07_48_12/compute055.ubb-hpc.local.xplane.pb
+Dumped tool data for overview_page.pb to k_fold_logs/scalars/20210202-074756/train/plugins/profile/2021_02_02_07_48_12/compute055.ubb-hpc.local.overview_page.pb
+Dumped tool data for input_pipeline.pb to k_fold_logs/scalars/20210202-074756/train/plugins/profile/2021_02_02_07_48_12/compute055.ubb-hpc.local.input_pipeline.pb
+Dumped tool data for tensorflow_stats.pb to k_fold_logs/scalars/20210202-074756/train/plugins/profile/2021_02_02_07_48_12/compute055.ubb-hpc.local.tensorflow_stats.pb
+Dumped tool data for kernel_stats.pb to k_fold_logs/scalars/20210202-074756/train/plugins/profile/2021_02_02_07_48_12/compute055.ubb-hpc.local.kernel_stats.pb
+
+1070/1070 [==============================] - 3263s 3s/step - loss: 0.6674 - accuracy: 0.7664 - val_loss: 0.5120 - val_accuracy: 0.8481
+Epoch 2/8
+1070/1070 [==============================] - 3231s 3s/step - loss: 0.4644 - accuracy: 0.8393 - val_loss: 0.4412 - val_accuracy: 0.8470
+Epoch 3/8
+1070/1070 [==============================] - 3215s 3s/step - loss: 0.4363 - accuracy: 0.8505 - val_loss: 0.4753 - val_accuracy: 0.8435
+Epoch 4/8
+1070/1070 [==============================] - 3208s 3s/step - loss: 0.4175 - accuracy: 0.8554 - val_loss: 0.4579 - val_accuracy: 0.8633
+Epoch 5/8
+1070/1070 [==============================] - 3219s 3s/step - loss: 0.3577 - accuracy: 0.8757 - val_loss: 0.3549 - val_accuracy: 0.8855
+Epoch 6/8
+1070/1070 [==============================] - 3218s 3s/step - loss: 0.3144 - accuracy: 0.8898 - val_loss: 0.3553 - val_accuracy: 0.8808
+Epoch 7/8
+1070/1070 [==============================] - 3227s 3s/step - loss: 0.3132 - accuracy: 0.8920 - val_loss: 0.3639 - val_accuracy: 0.8867
+Epoch 8/8
+1070/1070 [==============================] - 3219s 3s/step - loss: 0.2851 - accuracy: 0.9024 - val_loss: 0.3478 - val_accuracy: 0.8879
+54/54 [==============================] - 30s 546ms/step - loss: 0.3478 - accuracy: 0.8879
+Found 17118 validated image filenames belonging to 5 classes.
+Found 855 validated image filenames belonging to 5 classes.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+efficientnetb0 (Functional)  (None, 16, 16, 1280)      4049571
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 1280)              0
+_________________________________________________________________
+dense (Dense)                (None, 5)                 6405
+=================================================================
+Total params: 4,055,976
+Trainable params: 4,013,953
+Non-trainable params: 42,023
+_________________________________________________________________
+2021-02-02 14:58:51.121535: I tensorflow/core/profiler/lib/profiler_session.cc:136] Profiler session initializing.
+2021-02-02 14:58:51.121566: I tensorflow/core/profiler/lib/profiler_session.cc:155] Profiler session started.
+2021-02-02 14:58:51.121614: I tensorflow/core/profiler/lib/profiler_session.cc:172] Profiler session tear down.
+Epoch 1/8
+   1/1070 [..............................] - ETA: 3:01:14 - loss: 1.6518 - accuracy: 0.0000e+002021-02-02 14:59:02.544890: I tensorflow/core/profiler/lib/profiler_session.cc:136] Profiler session initializing.
+2021-02-02 14:59:02.544941: I tensorflow/core/profiler/lib/profiler_session.cc:155] Profiler session started.
+   2/1070 [..............................] - ETA: 57:46 - loss: 1.5919 - accuracy: 0.1250      2021-02-02 14:59:06.027174: I tensorflow/core/profiler/lib/profiler_session.cc:71] Profiler session collecting data.
+2021-02-02 14:59:06.047661: I tensorflow/core/profiler/lib/profiler_session.cc:172] Profiler session tear down.
+2021-02-02 14:59:06.069797: I tensorflow/core/profiler/rpc/client/save_profile.cc:137] Creating directory: k_fold_logs/scalars/20210202-145851/train/plugins/profile/2021_02_02_14_59_06
+2021-02-02 14:59:06.080509: I tensorflow/core/profiler/rpc/client/save_profile.cc:143] Dumped gzipped tool data for trace.json.gz to k_fold_logs/scalars/20210202-145851/train/plugins/profile/2021_02_02_14_59_06/compute055.ubb-hpc.local.trace.json.gz
+2021-02-02 14:59:06.094884: I tensorflow/core/profiler/rpc/client/save_profile.cc:137] Creating directory: k_fold_logs/scalars/20210202-145851/train/plugins/profile/2021_02_02_14_59_06
+2021-02-02 14:59:06.095198: I tensorflow/core/profiler/rpc/client/save_profile.cc:143] Dumped gzipped tool data for memory_profile.json.gz to k_fold_logs/scalars/20210202-145851/train/plugins/profile/2021_02_02_14_59_06/compute055.ubb-hpc.local.memory_profile.json.gz
+2021-02-02 14:59:06.097483: I tensorflow/core/profiler/rpc/client/capture_profile.cc:251] Creating directory: k_fold_logs/scalars/20210202-145851/train/plugins/profile/2021_02_02_14_59_06Dumped tool data for xplane.pb to k_fold_logs/scalars/20210202-145851/train/plugins/profile/2021_02_02_14_59_06/compute055.ubb-hpc.local.xplane.pb
+Dumped tool data for overview_page.pb to k_fold_logs/scalars/20210202-145851/train/plugins/profile/2021_02_02_14_59_06/compute055.ubb-hpc.local.overview_page.pb
+Dumped tool data for input_pipeline.pb to k_fold_logs/scalars/20210202-145851/train/plugins/profile/2021_02_02_14_59_06/compute055.ubb-hpc.local.input_pipeline.pb
+Dumped tool data for tensorflow_stats.pb to k_fold_logs/scalars/20210202-145851/train/plugins/profile/2021_02_02_14_59_06/compute055.ubb-hpc.local.tensorflow_stats.pb
+Dumped tool data for kernel_stats.pb to k_fold_logs/scalars/20210202-145851/train/plugins/profile/2021_02_02_14_59_06/compute055.ubb-hpc.local.kernel_stats.pb
+
+1070/1070 [==============================] - 3255s 3s/step - loss: 0.6812 - accuracy: 0.7525 - val_loss: 0.5282 - val_accuracy: 0.8246
+Epoch 2/8
+1070/1070 [==============================] - 3240s 3s/step - loss: 0.4895 - accuracy: 0.8335 - val_loss: 0.4091 - val_accuracy: 0.8561
+Epoch 3/8
+1070/1070 [==============================] - 3232s 3s/step - loss: 0.4405 - accuracy: 0.8482 - val_loss: 0.4709 - val_accuracy: 0.8468
+Epoch 4/8
+1070/1070 [==============================] - 3227s 3s/step - loss: 0.4212 - accuracy: 0.8560 - val_loss: 0.5042 - val_accuracy: 0.8374
+Epoch 5/8
+1070/1070 [==============================] - 3231s 3s/step - loss: 0.3605 - accuracy: 0.8734 - val_loss: 0.3409 - val_accuracy: 0.8877
+Epoch 6/8
+1070/1070 [==============================] - 3235s 3s/step - loss: 0.3193 - accuracy: 0.8911 - val_loss: 0.3609 - val_accuracy: 0.8807
+Epoch 7/8
+1070/1070 [==============================] - 3227s 3s/step - loss: 0.3089 - accuracy: 0.8960 - val_loss: 0.3452 - val_accuracy: 0.8854
+Epoch 8/8
+1070/1070 [==============================] - 3220s 3s/step - loss: 0.2917 - accuracy: 0.8975 - val_loss: 0.3232 - val_accuracy: 0.8924
+54/54 [==============================] - 29s 527ms/step - loss: 0.3232 - accuracy: 0.8924
+Found 17119 validated image filenames belonging to 5 classes.
+Found 855 validated image filenames belonging to 5 classes.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+efficientnetb0 (Functional)  (None, 16, 16, 1280)      4049571
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 1280)              0
+_________________________________________________________________
+dense (Dense)                (None, 5)                 6405
+=================================================================
+Total params: 4,055,976
+Trainable params: 4,013,953
+Non-trainable params: 42,023
+_________________________________________________________________
+2021-02-02 22:10:53.442396: I tensorflow/core/profiler/lib/profiler_session.cc:136] Profiler session initializing.
+2021-02-02 22:10:53.442428: I tensorflow/core/profiler/lib/profiler_session.cc:155] Profiler session started.
+2021-02-02 22:10:53.442485: I tensorflow/core/profiler/lib/profiler_session.cc:172] Profiler session tear down.
+Epoch 1/8
+   1/1070 [..............................] - ETA: 2:59:45 - loss: 1.5212 - accuracy: 0.37502021-02-02 22:11:04.716946: I tensorflow/core/profiler/lib/profiler_session.cc:136] Profiler session initializing.
+2021-02-02 22:11:04.716984: I tensorflow/core/profiler/lib/profiler_session.cc:155] Profiler session started.
+   2/1070 [..............................] - ETA: 58:10 - loss: 1.4913 - accuracy: 0.3906  2021-02-02 22:11:08.246897: I tensorflow/core/profiler/lib/profiler_session.cc:71] Profiler session collecting data.
+2021-02-02 22:11:08.269817: I tensorflow/core/profiler/lib/profiler_session.cc:172] Profiler session tear down.
+2021-02-02 22:11:08.293754: I tensorflow/core/profiler/rpc/client/save_profile.cc:137] Creating directory: k_fold_logs/scalars/20210202-221053/train/plugins/profile/2021_02_02_22_11_08
+2021-02-02 22:11:08.304149: I tensorflow/core/profiler/rpc/client/save_profile.cc:143] Dumped gzipped tool data for trace.json.gz to k_fold_logs/scalars/20210202-221053/train/plugins/profile/2021_02_02_22_11_08/compute055.ubb-hpc.local.trace.json.gz
+2021-02-02 22:11:08.317990: I tensorflow/core/profiler/rpc/client/save_profile.cc:137] Creating directory: k_fold_logs/scalars/20210202-221053/train/plugins/profile/2021_02_02_22_11_08
+2021-02-02 22:11:08.318385: I tensorflow/core/profiler/rpc/client/save_profile.cc:143] Dumped gzipped tool data for memory_profile.json.gz to k_fold_logs/scalars/20210202-221053/train/plugins/profile/2021_02_02_22_11_08/compute055.ubb-hpc.local.memory_profile.json.gz
+2021-02-02 22:11:08.320816: I tensorflow/core/profiler/rpc/client/capture_profile.cc:251] Creating directory: k_fold_logs/scalars/20210202-221053/train/plugins/profile/2021_02_02_22_11_08Dumped tool data for xplane.pb to k_fold_logs/scalars/20210202-221053/train/plugins/profile/2021_02_02_22_11_08/compute055.ubb-hpc.local.xplane.pb
+Dumped tool data for overview_page.pb to k_fold_logs/scalars/20210202-221053/train/plugins/profile/2021_02_02_22_11_08/compute055.ubb-hpc.local.overview_page.pb
+Dumped tool data for input_pipeline.pb to k_fold_logs/scalars/20210202-221053/train/plugins/profile/2021_02_02_22_11_08/compute055.ubb-hpc.local.input_pipeline.pb
+Dumped tool data for tensorflow_stats.pb to k_fold_logs/scalars/20210202-221053/train/plugins/profile/2021_02_02_22_11_08/compute055.ubb-hpc.local.tensorflow_stats.pb
+Dumped tool data for kernel_stats.pb to k_fold_logs/scalars/20210202-221053/train/plugins/profile/2021_02_02_22_11_08/compute055.ubb-hpc.local.kernel_stats.pb
+
+1070/1070 [==============================] - 3260s 3s/step - loss: 0.6775 - accuracy: 0.7573 - val_loss: 0.7800 - val_accuracy: 0.7287
+Epoch 2/8
+1070/1070 [==============================] - 3245s 3s/step - loss: 0.4768 - accuracy: 0.8357 - val_loss: 0.4791 - val_accuracy: 0.8526
+Epoch 3/8
+1070/1070 [==============================] - 3244s 3s/step - loss: 0.4535 - accuracy: 0.8477 - val_loss: 0.4539 - val_accuracy: 0.8503
+Epoch 4/8
+1070/1070 [==============================] - 3251s 3s/step - loss: 0.4253 - accuracy: 0.8574 - val_loss: 0.4653 - val_accuracy: 0.8456
+Epoch 5/8
+1070/1070 [==============================] - 3242s 3s/step - loss: 0.4038 - accuracy: 0.8629 - val_loss: 0.4474 - val_accuracy: 0.8444
+Epoch 6/8
+1070/1070 [==============================] - 3248s 3s/step - loss: 0.4042 - accuracy: 0.8619 - val_loss: 0.6755 - val_accuracy: 0.7661
+Epoch 7/8
+1070/1070 [==============================] - 3249s 3s/step - loss: 0.3931 - accuracy: 0.8664 - val_loss: 0.3880 - val_accuracy: 0.8585
+Epoch 8/8
+1070/1070 [==============================] - 3242s 3s/step - loss: 0.3724 - accuracy: 0.8761 - val_loss: 0.4954 - val_accuracy: 0.8000
+54/54 [==============================] - 30s 544ms/step - loss: 0.3880 - accuracy: 0.8585
+Found 17120 validated image filenames belonging to 5 classes.
+Found 855 validated image filenames belonging to 5 classes.
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+efficientnetb0 (Functional)  (None, 16, 16, 1280)      4049571
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 1280)              0
+_________________________________________________________________
+dense (Dense)                (None, 5)                 6405
+=================================================================
+Total params: 4,055,976
+Trainable params: 4,013,953
+Non-trainable params: 42,023
+_________________________________________________________________
+2021-02-03 05:24:49.258262: I tensorflow/core/profiler/lib/profiler_session.cc:136] Profiler session initializing.
+2021-02-03 05:24:49.258285: I tensorflow/core/profiler/lib/profiler_session.cc:155] Profiler session started.
+2021-02-03 05:24:49.258907: I tensorflow/core/profiler/lib/profiler_session.cc:172] Profiler session tear down.
+Epoch 1/8
+   1/1070 [..............................] - ETA: 3:11:17 - loss: 1.5680 - accuracy: 0.31252021-02-03 05:25:01.200007: I tensorflow/core/profiler/lib/profiler_session.cc:136] Profiler session initializing.
+2021-02-03 05:25:01.200051: I tensorflow/core/profiler/lib/profiler_session.cc:155] Profiler session started.
+   2/1070 [..............................] - ETA: 57:05 - loss: 1.5557 - accuracy: 0.3281  2021-02-03 05:25:04.687891: I tensorflow/core/profiler/lib/profiler_session.cc:71] Profiler session collecting data.
+2021-02-03 05:25:04.708111: I tensorflow/core/profiler/lib/profiler_session.cc:172] Profiler session tear down.
+2021-02-03 05:25:04.731878: I tensorflow/core/profiler/rpc/client/save_profile.cc:137] Creating directory: k_fold_logs/scalars/20210203-052449/train/plugins/profile/2021_02_03_05_25_04
+2021-02-03 05:25:04.742723: I tensorflow/core/profiler/rpc/client/save_profile.cc:143] Dumped gzipped tool data for trace.json.gz to k_fold_logs/scalars/20210203-052449/train/plugins/profile/2021_02_03_05_25_04/compute055.ubb-hpc.local.trace.json.gz
+2021-02-03 05:25:04.756828: I tensorflow/core/profiler/rpc/client/save_profile.cc:137] Creating directory: k_fold_logs/scalars/20210203-052449/train/plugins/profile/2021_02_03_05_25_04
+2021-02-03 05:25:04.757128: I tensorflow/core/profiler/rpc/client/save_profile.cc:143] Dumped gzipped tool data for memory_profile.json.gz to k_fold_logs/scalars/20210203-052449/train/plugins/profile/2021_02_03_05_25_04/compute055.ubb-hpc.local.memory_profile.json.gz
+2021-02-03 05:25:04.760502: I tensorflow/core/profiler/rpc/client/capture_profile.cc:251] Creating directory: k_fold_logs/scalars/20210203-052449/train/plugins/profile/2021_02_03_05_25_04Dumped tool data for xplane.pb to k_fold_logs/scalars/20210203-052449/train/plugins/profile/2021_02_03_05_25_04/compute055.ubb-hpc.local.xplane.pb
+Dumped tool data for overview_page.pb to k_fold_logs/scalars/20210203-052449/train/plugins/profile/2021_02_03_05_25_04/compute055.ubb-hpc.local.overview_page.pb
+Dumped tool data for input_pipeline.pb to k_fold_logs/scalars/20210203-052449/train/plugins/profile/2021_02_03_05_25_04/compute055.ubb-hpc.local.input_pipeline.pb
+Dumped tool data for tensorflow_stats.pb to k_fold_logs/scalars/20210203-052449/train/plugins/profile/2021_02_03_05_25_04/compute055.ubb-hpc.local.tensorflow_stats.pb
+Dumped tool data for kernel_stats.pb to k_fold_logs/scalars/20210203-052449/train/plugins/profile/2021_02_03_05_25_04/compute055.ubb-hpc.local.kernel_stats.pb
+
+1070/1070 [==============================] - 3244s 3s/step - loss: 0.6720 - accuracy: 0.7578 - val_loss: 0.5351 - val_accuracy: 0.8199
+Epoch 2/8
+1070/1070 [==============================] - 3234s 3s/step - loss: 0.4863 - accuracy: 0.8263 - val_loss: 0.5192 - val_accuracy: 0.8456
+Epoch 3/8
+1070/1070 [==============================] - 3247s 3s/step - loss: 0.4448 - accuracy: 0.8496 - val_loss: 0.6062 - val_accuracy: 0.7942
+Epoch 4/8
+1070/1070 [==============================] - 3249s 3s/step - loss: 0.4403 - accuracy: 0.8504 - val_loss: 0.4763 - val_accuracy: 0.8515
+Epoch 5/8
+1070/1070 [==============================] - 3232s 3s/step - loss: 0.4021 - accuracy: 0.8600 - val_loss: 0.4327 - val_accuracy: 0.8538
+Epoch 6/8
+1070/1070 [==============================] - 3238s 3s/step - loss: 0.3921 - accuracy: 0.8642 - val_loss: 0.4900 - val_accuracy: 0.8398
+Epoch 7/8
+1070/1070 [==============================] - 3252s 3s/step - loss: 0.3834 - accuracy: 0.8719 - val_loss: 0.5492 - val_accuracy: 0.8421
+Epoch 8/8
+1070/1070 [==============================] - 3231s 3s/step - loss: 0.3362 - accuracy: 0.8829 - val_loss: 0.4019 - val_accuracy: 0.8667
+54/54 [==============================] - 28s 516ms/step - loss: 0.4019 - accuracy: 0.8667
+CI loss: (0.356488526908166, 0.37880916491388594)
+CI acc: (0.8677541003469259, 0.8787961497064799)
